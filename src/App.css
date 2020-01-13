@@ -1,38 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap&subset=latin-ext');
+
+body{
+  background-color: rgb(245, 245, 245);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h3{
+  font-family: 'Permanent Marker', cursive;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  width: fit-content;
+  margin: auto;
+  margin-top: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 10vh;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#logoStyle{
+font-family: 'Permanent Marker', cursive;
+list-style: none;
+}
+
+.navStyle{
+color: black;
+text-decoration: none;
+}
+
+.navStyle:hover {
+text-decoration: underline;
+}
+
+#wrapper {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 300px;
+}
+
+#aside{
+  background-color: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.10);
+  border-right: 1px solid rgba(0, 0, 0, 0.10);
+  height: 100%;
+}
+
+#profilBild{
+  width: 100%;
+  filter: saturate(200%);
+}
+
+p{
+   margin: 1em;
+   
+}
+
+aside li{
+  text-align: center;
+  font-size: 1.1em;
+}
+
+ul{
+ list-style: none;
+ padding-inline-start: 0;
+}
+
+.githubItem{
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  width: 500px;
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.frameStyle{
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  width: fit-content;
+  margin: auto;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+@media only screen and (max-width:840px) {
+  
+  #wrapper {
+  grid-template-columns: auto;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+*{
+  font-size: 1.02em;
+}
+
+.navFontAwesomeIcons{
+  display: none !important;
+}
+
+.nav-links{
+  justify-content: space-between;
+}
+
+#profilBild{
+  width: 65%;
+  margin-top: 2em;
+}
+
 }
