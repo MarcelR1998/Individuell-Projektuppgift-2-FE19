@@ -12,6 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <div id="gradientBar"></div>
           <Nav />
           <Switch>
             <Route path="/" exact component={Hem} />

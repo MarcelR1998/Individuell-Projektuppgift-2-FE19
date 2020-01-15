@@ -7,6 +7,7 @@ class Portfolj extends Component {
         this.state = {
             items: [],
             isLoaded: false,
+            starred: 0
         }
     }
 
@@ -23,16 +24,19 @@ class Portfolj extends Component {
 
     render() {
 
-        var { isLoaded, items } = this.state;
+        var { isLoaded, items, starred } = this.state;
 
         if (!isLoaded) {
-            return <h3><i className="fas fa-sync fa-spin"></i> Hämtar informations från Githubs API...</h3>;
+            return <h3><i className="fas fa-sync fa-spin"></i> Hämtar information från Githubs API...</h3>;
         } else {
             return (
                 <div>
                     <h1>Vad jag gjort</h1>
                     <p className="frameStyle" ><i className="fas fa-info-circle"></i> Denna sida uppdateras automatiskt via Githubs API</p>
-                    <p><i className="fa fa-github"></i> Repos: {items.length}</p>
+                    <p><i className="fa fa-github"></i> Repos: {items.length} -
+                        {items.forEach(item => {
+                        starred += item.stargazers_count;
+                    })} <i className="far fa-star"></i> Stjärnskådare: {starred} </p>
                     <ul>
                         {items.map(item => (
                             <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a href={item.html_url}>Länk</a></li>

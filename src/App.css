@@ -9,6 +9,12 @@ body{
   text-align: center;
 }
 
+#gradientBar{
+  width: 100%;
+  height: 1vh;
+background: linear-gradient(90deg, rgba(3,170,92,1) 0%, rgba(14,166,133,1) 34%, rgba(107,158,249,1) 100%);
+}
+
 h1, h3{
   font-family: 'Permanent Marker', cursive;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
@@ -48,6 +54,15 @@ text-decoration: none;
 text-decoration: underline;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 #wrapper {
   margin: auto;
   width: 100%;
@@ -55,6 +70,21 @@ text-decoration: underline;
   height: 100vh;
   display: grid;
   grid-template-columns: auto 300px;
+}
+
+#textContainer {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  width: fit-content;
+  margin: auto;
+  margin-top: 1em;
+  padding: 1em;
+  max-width: 480px;
+}
+
+#vectorImage {
+  width: 80%;
+  max-width: 400px;
 }
 
 #aside{
@@ -71,7 +101,6 @@ text-decoration: underline;
 
 p{
    margin: 1em;
-   
 }
 
 aside li{
@@ -101,6 +130,12 @@ ul{
   margin: auto;
   margin-top: 1em;
   padding: 1em;
+  max-width: 80%;
+}
+
+.contactList li{
+  margin: 1em 0 1em 0;
+  max-width: 400px;
 }
 
 @media only screen and (max-width:840px) {
@@ -124,6 +159,10 @@ ul{
 #profilBild{
   width: 65%;
   margin-top: 2em;
+}
+
+#textContainer {
+  max-width: 80%;
 }
 
 }
