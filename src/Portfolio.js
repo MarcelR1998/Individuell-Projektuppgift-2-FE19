@@ -33,7 +33,7 @@ class Portfolio extends Component {
         var { isLoaded, items, starred } = this.state;
 
         if (!isLoaded) {
-            return <h3><i className="fas fa-sync fa-spin"></i> Hämtar information från Githubs API...</h3>;
+            return <h2><i className="fas fa-sync fa-spin"></i> Hämtar information från Githubs API...</h2>;
         } else {
             return (
                 <div>
@@ -42,7 +42,7 @@ class Portfolio extends Component {
                     <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stargazers: {starred} </p>
                     <ul>
                         {items.map(item => (
-                            <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a href={item.html_url}>[Länk]</a></li>
+                            <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a className="button" href={item.html_url}>[Länk]</a></li>
                         ))}
                     </ul>
                     <img
@@ -50,7 +50,7 @@ class Portfolio extends Component {
                         src="https://avatars3.githubusercontent.com/u/54536778?v=4">
 
                     </img>
-                    <h2><a href="https://github.com/MarcelR1998"><i className="fa fa-github"></i> https://github.com/MarcelR1998</a></h2>
+                    <h3><a href="https://github.com/MarcelR1998"><i className="fa fa-github"></i> https://github.com/MarcelR1998</a></h3>
                 </div>
             );
         }
