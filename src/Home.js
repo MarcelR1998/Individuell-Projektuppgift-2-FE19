@@ -3,7 +3,7 @@ import image1 from "./img1.jpg";
 import image2 from "./img2.jpg";
 import vectorImage from "./vectorImage.svg";
 
-class Hem extends Component {
+class Home extends Component {
     render() {
         return (
             <div id="wrapper">
@@ -15,7 +15,7 @@ class Hem extends Component {
                     <img id="vectorImage" src={vectorImage} alt="Vektorgrafik föreställande buggfixare"></img>
                 </section>
                 <aside id="aside">
-                    <img id="profilBild" onMouseOver={e => (e.currentTarget.src = image2)}
+                    <img id="profilePicture" onMouseOver={e => (e.currentTarget.src = image2)}
                         onMouseOut={e => (e.currentTarget.src = image1)}
                         src={image1} alt="Profilbild" >
                     </img>
@@ -37,4 +37,4 @@ class Hem extends Component {
     }
 }
 
-export default Hem;
+export default Home;

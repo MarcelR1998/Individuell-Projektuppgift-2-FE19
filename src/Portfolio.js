@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Portfolj extends Component {
+class Portfolio extends Component {
 
     constructor(props) {
         super(props);
@@ -12,12 +12,18 @@ class Portfolj extends Component {
     }
 
     componentDidMount() {
+        let starred = 0;
         fetch("https://api.github.com/users/MarcelR1998/repos")
             .then(res => res.json())
             .then(json => {
+                //Add github stars
+                json.forEach(item => {
+                    starred += Number(item.stargazers_count)
+                });
                 this.setState({
                     isLoaded: true,
                     items: json,
+                    starred
                 })
             });
     }
@@ -33,13 +39,10 @@ class Portfolj extends Component {
                 <div>
                     <h1>Vad jag gjort</h1>
                     <p className="frameStyle" ><i className="fas fa-info-circle"></i> Denna sida uppdateras automatiskt via Githubs API</p>
-                    <p><i className="fa fa-github"></i> Repos: {items.length} -
-                        {items.forEach(item => {
-                        starred += item.stargazers_count;
-                    })} <i className="far fa-star"></i> Stjärnskådare: {starred} </p>
+                    <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stjärnskådare: {starred} </p>
                     <ul>
                         {items.map(item => (
-                            <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a href={item.html_url}>Länk</a></li>
+                            <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a href={item.html_url}>[Länk]</a></li>
                         ))}
                     </ul>
                     <img
@@ -56,4 +59,4 @@ class Portfolj extends Component {
     }
 }
 
-export default Portfolj;
+export default Portfolio;

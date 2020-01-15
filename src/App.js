@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Nav from "./Nav.js";
-import Hem from "./Hem.js";
-import Kontakt from "./Kontakt";
-import Portfolj from './Portfolj.js';
+import Home from "./Home.js";
+import Contact from "./Contact.js";
+import Portfolio from './Portfolio.js';
 import 'font-awesome/css/font-awesome.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,9 +15,9 @@ class App extends Component {
           <div id="gradientBar"></div>
           <Nav />
           <Switch>
-            <Route path="/" exact component={Hem} />
-            <Route path="/portfolj" component={Portfolj} />
-            <Route path="/kontakt" component={Kontakt} />
+            <Route path="/" exact component={Home} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contact} />
           </Switch>
         </div>
       </Router >

@@ -15,10 +15,10 @@ class Nav extends Component {
                     <Link className="navStyle" to="/">
                         <li>Hem</li>
                     </Link>
-                    <Link className="navStyle" to="/portfolj">
+                    <Link className="navStyle" to="/portfolio">
                         <li><i className="navFontAwesomeIcons fa fa-github"></i> Portfölj</li>
                     </Link>
-                    <Link className="navStyle" to="/kontakt">
+                    <Link className="navStyle" to="/contact">
                         <li><i className="navFontAwesomeIcons fa fa-paper-plane"></i> Kontakt</li>
                     </Link>
                     <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
