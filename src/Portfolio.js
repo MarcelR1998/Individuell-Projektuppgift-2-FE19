@@ -39,7 +39,7 @@ class Portfolio extends Component {
                 <div>
                     <h1>Vad jag gjort</h1>
                     <p className="frameStyle" ><i className="fas fa-info-circle"></i> Denna sida uppdateras automatiskt via Githubs API</p>
-                    <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stjärnskådare: {starred} </p>
+                    <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stargazers: {starred} </p>
                     <ul>
                         {items.map(item => (
                             <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a href={item.html_url}>[Länk]</a></li>
