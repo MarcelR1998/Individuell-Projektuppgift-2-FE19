@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap&subset=latin-ext');
 
+
 body{
   background-color: rgb(245, 245, 245);
     font-family: 'Quicksand', sans-serif;
@@ -114,7 +115,6 @@ background: linear-gradient(90deg, rgba(49,117,194,1) 0%, rgba(0,191,191,1) 100%
 
 #profilePicture{
   width: 100%;
-  filter: saturate(200%);
 }
 
 #aside{
@@ -141,6 +141,14 @@ p{
 ul{
  list-style: none;
  padding-inline-start: 0;
+}
+
+#search{
+  font-family: Quicksand, FontAwesome;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  padding: 0.5em;
+  border-radius: 0.3em;
+  font-size: 1.0em;
 }
 
 .githubItem{

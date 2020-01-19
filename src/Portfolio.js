@@ -7,7 +7,8 @@ class Portfolio extends Component {
         this.state = {
             items: [],
             isLoaded: false,
-            starred: 0
+            starred: 0,
+            search: "",
         }
     }
 
@@ -28,6 +29,19 @@ class Portfolio extends Component {
             });
     }
 
+    onchange = e => {
+        this.setState({ search: e.target.value });
+    }
+
+    renderItem = item => {
+        const { search } = this.state;
+
+        if (search !== "" && item.name.toLowerCase().indexOf(search.toLowerCase()) === -1) {
+            return null;
+        }
+        return <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a className="button" href={item.html_url}>[Länk]</a></li>
+    }
+
     render() {
 
         var { isLoaded, items, starred } = this.state;
@@ -40,9 +54,10 @@ class Portfolio extends Component {
                     <h1>Vad jag gjort</h1>
                     <p className="frameStyle" ><i className="fas fa-info-circle"></i> Denna sida uppdateras automatiskt via Githubs API</p>
                     <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stargazers: {starred} </p>
+                    <input type="text" placeholder="Sök " id="search" value={this.search} onChange={this.onchange} ></input>
                     <ul>
                         {items.map(item => (
-                            <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a className="button" href={item.html_url}>[Länk]</a></li>
+                            this.renderItem(item)
                         ))}
                     </ul>
                     <img
