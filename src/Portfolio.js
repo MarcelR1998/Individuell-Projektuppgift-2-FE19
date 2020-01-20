@@ -39,7 +39,7 @@ class Portfolio extends Component {
         if (search !== "" && item.name.toLowerCase().indexOf(search.toLowerCase()) === -1) {
             return null;
         }
-        return <li className="githubItem" key={item.id}> {item.name}, {item.description} - <a className="button" href={item.html_url}>[Länk]</a></li>
+        return <li className="githubItem" key={item.id}> {item.name}, {item.description} <a className="button" href={item.html_url}>[Länk]</a></li>
     }
 
     render() {

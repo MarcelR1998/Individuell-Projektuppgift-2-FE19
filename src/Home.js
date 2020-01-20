@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import image1 from "./img1.jpg";
 import image2 from "./img2.jpg";
-import vectorImage from "./vectorImage.svg";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
@@ -9,14 +8,13 @@ class Home extends Component {
         return (
             <div id="wrapper">
                 <section  >
-                    <h1>Frontendutvecklare <br /> baserad i Stockholm</h1>
+                    <h1>Frontend-utvecklare <br /> baserad i Stockholm</h1>
                     <p id="textContainer">Hej! Jag heter Marcel, och är en Frontendutvecklare med brinnande intresse för teknologi och att uttrycka mig kreativt.
-                        Jag studerar nuvarande på yrkeshögskola, och söker aktivt efter en praktikplats på en webbbyrå eller liknande i höst.
+                        Jag studerar nuvarande på yrkeshögskola, och söker aktivt efter en praktikplats på en webbyrå eller liknande i höst.
                         <br /><br /> Kontakta mig gärna om det låter intressant :)</p>
-                    <Link className="button" to="/portfolio">
+                    <Link className="button frontPageButton" to="/portfolio">
                         <i className="navFontAwesomeIcons fa fa-github"></i> Portfölj
                     </Link>
-                    <img id="vectorImage" src={vectorImage} alt="Vektorgrafik föreställande buggfixare"></img>
                 </section>
                 <aside id="aside">
                     <img id="profilePicture" onMouseOver={e => (e.currentTarget.src = image2)}
