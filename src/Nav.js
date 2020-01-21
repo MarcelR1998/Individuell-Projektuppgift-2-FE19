@@ -6,7 +6,7 @@ class Nav extends Component {
         return (
             <nav>
                 <Link className="navStyle" to="/">
-                    <h2 id="logoStyle" >Marcel Rossi</h2>
+                    <h2>Marcel Rossi</h2>
                 </Link>
                 <ul className="nav-links">
                     <Link className="navStyle" to="/">
@@ -18,7 +18,6 @@ class Nav extends Component {
                     <Link className="navStyle" to="/contact">
                         <li><i className="navFontAwesomeIcons fa fa-paper-plane"></i> Kontakt</li>
                     </Link>
-                    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 </ul>
             </nav>
         );

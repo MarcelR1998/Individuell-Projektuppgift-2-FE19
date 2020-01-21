@@ -47,7 +47,7 @@ class Portfolio extends Component {
         var { isLoaded, items, starred } = this.state;
 
         if (!isLoaded) {
-            return <h2><i className="fas fa-sync fa-spin"></i> Hämtar information från Githubs API...</h2>;
+            return <h2><i className="fas fa-sync fa-spin"></i></h2>;
         } else {
             return (
                 <div>

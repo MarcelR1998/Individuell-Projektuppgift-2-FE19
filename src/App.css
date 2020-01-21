@@ -104,7 +104,7 @@ a:hover{
 }
 
 .frontPageButton{
-margin-bottom: 1em;
+margin-bottom: 2em;
 }
 
 .button:hover{text-decoration: none;
@@ -117,7 +117,7 @@ background: linear-gradient(90deg, rgba(49,117,194,1) 0%, rgba(0,191,191,1) 100%
 }
 
 #profilePicture{
-  width: 100%;
+  width: 300px;
 }
 
 #aside{
@@ -157,7 +157,7 @@ ul{
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.10);
   width: 350px;
-  max-width: 60%;
+  max-width: 80%;
   margin: auto;
   margin-bottom: 1em;
   padding: 1em;
@@ -205,7 +205,7 @@ nav {
 }
 
 #profilePicture{
-  width: 65%;
+  max-width: 65%;
   margin-top: 2em;
 }
 

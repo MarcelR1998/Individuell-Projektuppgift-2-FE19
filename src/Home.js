@@ -13,7 +13,7 @@ class Home extends Component {
                         Jag studerar nuvarande på yrkeshögskola, och söker aktivt efter en praktikplats på en webbyrå eller liknande i höst.
                         <br /><br /> Kontakta mig gärna om det låter intressant :)</p>
                     <Link className="button frontPageButton" to="/portfolio">
-                        <i className="navFontAwesomeIcons fa fa-github"></i> Portfölj
+                        <i className="fa fa-github"></i> Portfölj
                     </Link>
                 </section>
                 <aside id="aside">
