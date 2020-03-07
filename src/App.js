@@ -12,13 +12,14 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div id="gradientBar"></div>
           <Nav />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
+          <main>
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+          </main>
         </div>
       </Router >
     );

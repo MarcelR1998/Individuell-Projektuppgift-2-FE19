@@ -47,7 +47,7 @@ class Portfolio extends Component {
         var { isLoaded, items, starred } = this.state;
 
         if (!isLoaded) {
-            return <h3><i className="fas fa-sync fa-spin"></i></h3>;
+            return <h3 id="loading"><i className="fas fa-sync fa-spin"></i></h3>;
         } else {
             return (
                 <div>

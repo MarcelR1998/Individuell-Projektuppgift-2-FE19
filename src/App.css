@@ -25,7 +25,7 @@ body{
 h1{
   font-family: 'Montserrat', sans-serif;
   width: fit-content;
-  margin: 2em auto 0;
+  margin: calc(11vh + 2em) auto 0;
   /*margin-top: 0.5em;*/
   font-size:calc(20px + 2vw);
 }
@@ -41,32 +41,39 @@ h3{
 }
 
 nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+#navBarContents {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
-  background-color: white;
+  height: 10vh;
+  background-color: rgba(255, 255, 255, 0.9);
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
 }
 
 .nav-links {
-  width: 50%;
+  width: 95%;
+  max-width: 600px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
 }
 
-.navStyle{
+.navLinkStyle{
   color: black;
   text-decoration: none;
 }
 
-.navStyle:hover {
+.navLinkStyle:hover {
 text-decoration: none;
 }
 
-.navStyle::after {
+.navLinkStyle::after {
   content: "";
   display: block;
   width: 0;
@@ -76,7 +83,7 @@ text-decoration: none;
   margin: auto;
 }
 
-.navStyle:hover::after {
+.navLinkStyle:hover::after {
   width: 100%;
   transition: width .3s;
 }
@@ -127,11 +134,6 @@ margin-bottom: 2em;
 background: linear-gradient(90deg, rgba(49,117,194,1) 0%, rgba(0,191,191,1) 100%);;
 }
 
-#vectorImage {
-  width: 80%;
-  max-width: 400px;
-}
-
 #profilePicture{
   width: 300px;
 }
@@ -141,6 +143,7 @@ background: linear-gradient(90deg, rgba(49,117,194,1) 0%, rgba(0,191,191,1) 100%
   border-left: 1px solid rgba(0, 0, 0, 0.10);
   border-right: 1px solid rgba(0, 0, 0, 0.10);
   height: 100%;
+  margin-top: 11vh;
 }
 
 aside li{
@@ -156,6 +159,10 @@ p{
 ul{
  list-style: none;
  padding-inline-start: 0;
+}
+
+#loading{
+  margin: 16vh auto 1em auto;
 }
 
 #search{
@@ -212,10 +219,6 @@ ul{
   display: none !important;
 }
 
-nav {
-  justify-content: space-evenly;
-}
-
 .nav-links{
   justify-content: space-between;
 }
@@ -223,6 +226,10 @@ nav {
 #profilePicture{
   max-width: 65%;
   margin-top: 2em;
+}  
+
+#aside{
+  margin-top: 0;
 }
 
 #textContainer {

@@ -5,20 +5,25 @@ class Nav extends Component {
     render() {
         return (
             <nav>
-                <Link className="navStyle" to="/">
-                    <h2>Marcel Rossi</h2>
-                </Link>
-                <ul className="nav-links">
-                    <Link className="navStyle" to="/">
-                        <li>Hem</li>
-                    </Link>
-                    <Link className="navStyle" to="/portfolio">
-                        <li><i className="navFontAwesomeIcons fa fa-github"></i> Portfölj</li>
-                    </Link>
-                    <Link className="navStyle" to="/contact">
-                        <li><i className="navFontAwesomeIcons fa fa-paper-plane"></i> Kontakt</li>
-                    </Link>
-                </ul>
+                <div id="gradientBar"></div>
+                <div id="navBarContents">
+                    <ul className="nav-links">
+                        <li>
+                            <Link className="navLinkStyle" to="/">
+                                <h2>Marcel Rossi</h2>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className="navLinkStyle" to="/">Hem</Link>
+                        </li>
+                        <li>
+                            <Link className="navLinkStyle" to="/portfolio"><i className="navFontAwesomeIcons fa fa-github"></i> Portfölj</Link>
+                        </li>
+                        <li>
+                            <Link className="navLinkStyle" to="/contact"><i className="navFontAwesomeIcons fa fa-paper-plane"></i> Kontakt</Link>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         );
     }
