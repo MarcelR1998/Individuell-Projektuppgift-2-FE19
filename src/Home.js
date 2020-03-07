@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div id="wrapper">
                 <section  >
-                    <h1>Frontend-utvecklare <br /> baserad i Stockholm</h1>
+                    <h1>Frontendutvecklare <br /> baserad i Stockholm</h1>
                     <p id="textContainer">Hej! Jag heter Marcel, och är en Frontendutvecklare med brinnande intresse för teknologi och att uttrycka mig kreativt.
                         Jag studerar nuvarande på yrkeshögskola, och söker aktivt efter en praktikplats på en webbyrå eller liknande i höst.
                         <br /><br /> Kontakta mig gärna om det låter intressant :)</p>
@@ -31,6 +31,7 @@ class Home extends Component {
                         <li><i className="fab fa-npm"></i> NPM</li>
                         <li><i className="fab fa-bootstrap"></i> Bootstrap</li>
                         <li><i className="fab fa-git-alt"></i> Git</li>
+                        <li><i className="fas fa-server"></i> Firebase</li>
                         <li><i className="fab fa-linux"></i> Linux</li>
                     </ul>
                 </aside>

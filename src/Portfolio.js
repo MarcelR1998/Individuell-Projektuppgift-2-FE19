@@ -39,7 +39,7 @@ class Portfolio extends Component {
         if (search !== "" && item.name.toLowerCase().indexOf(search.toLowerCase()) === -1) {
             return null;
         }
-        return <li className="githubItem" key={item.id}> {item.name}, {item.description} <a className="button" href={item.html_url}>[Länk]</a></li>
+        return <li className="githubItem" key={item.id}> <p>{item.name}</p> {item.description} <a className="button" href={item.html_url}>[Länk]</a></li>
     }
 
     render() {
@@ -47,7 +47,7 @@ class Portfolio extends Component {
         var { isLoaded, items, starred } = this.state;
 
         if (!isLoaded) {
-            return <h2><i className="fas fa-sync fa-spin"></i></h2>;
+            return <h3><i className="fas fa-sync fa-spin"></i></h3>;
         } else {
             return (
                 <div>
