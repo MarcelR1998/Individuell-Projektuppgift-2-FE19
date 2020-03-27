@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class Portfolio extends Component {
 
@@ -39,7 +40,14 @@ class Portfolio extends Component {
         if (search !== "" && item.name.toLowerCase().indexOf(search.toLowerCase()) === -1) {
             return null;
         }
-        return <li className="githubItem" key={item.id}> <p>{item.name}</p> {item.description} <a className="button" href={item.html_url}>[Länk]</a></li>
+        return <li className="githubItem" key={item.id}>
+            <h4>{item.name}</h4>
+            <p>{item.description}</p>
+            <div style={{ display: "flex", justifyContent: "space-evenly", flexDirection: "row" }}>
+                {item.homepage ? <PortfolioButton href={item.homepage}>hemsida</PortfolioButton> : null}
+                <PortfolioButton href={item.html_url}><i class="fab fa-github"></i> github</PortfolioButton>
+            </div>
+        </li>
     }
 
     render() {
@@ -68,9 +76,8 @@ class Portfolio extends Component {
                         <img
                             alt="Github bild" style={{ width: "200px", borderRadius: "10em", }}
                             src="https://avatars3.githubusercontent.com/u/54536778?v=4">
-
                         </img>
-                        <h3><a href="https://github.com/MarcelR1998"><i className="fa fa-github"></i> https://github.com/MarcelR1998</a></h3>
+                        <h3><a href="https://github.com/MarcelR1998"><i className="fa fa-github"></i> github.com/MarcelR1998</a></h3>
                     </div>
                 </div>
             );
@@ -80,4 +87,17 @@ class Portfolio extends Component {
     }
 }
 
+const PortfolioButton = styled.a`
+    display: block;    
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    &:hover {
+    text-decoration: none;
+    background-color: #f5f5f5;
+  }
+`
 export default Portfolio;
+
