@@ -44,7 +44,7 @@ class Portfolio extends Component {
             <h4>{item.name}</h4>
             <p>{item.description}</p>
             <div style={{ display: "flex", justifyContent: "space-evenly", flexDirection: "row" }}>
-                {item.homepage ? <PortfolioButton href={item.homepage}>hemsida</PortfolioButton> : null}
+                {item.homepage ? <PortfolioButton href={item.homepage}>website</PortfolioButton> : null}
                 <PortfolioButton href={item.html_url}><i class="fab fa-github"></i> github</PortfolioButton>
             </div>
         </li>
@@ -64,8 +64,7 @@ class Portfolio extends Component {
             return (
                 <div id="portfolioWrapper">
                     <div>
-                        <h1>Vad jag gjort</h1>
-                        <p className="frameStyle" ><i className="fas fa-info-circle"></i> Denna sida uppdateras automatiskt via Githubs API</p>
+                        <h1>What I've done</h1>
                         <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stargazers: {starred} </p>
                         <input type="text" placeholder="Sök " id="search" value={this.search} onChange={this.onchange} ></input>
                         <ul>
