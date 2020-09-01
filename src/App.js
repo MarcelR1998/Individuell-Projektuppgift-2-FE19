@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Nav from "./components/NavBar.js";
+import Nav from "./components/NavBar";
 import Footer from './components/Footer';
 import Home from "./pages/Home.js";
 import Contact from "./pages/Contact.js";
@@ -31,7 +31,7 @@ h1{
   font-family: 'Montserrat', sans-serif;
   width: fit-content;
   margin: auto;
-  margin-top: 8px;
+  margin-top: 16px;
   font-size:calc(20px + 2vw);
 }
 
@@ -59,7 +59,7 @@ a:hover{
   /*border: 1px solid rgba(0, 0, 0, 0.10);*/
   width: fit-content;
   margin: auto;
-  padding: 1em;
+  margin-top: 16px;
   max-width: 480px;
 }
 

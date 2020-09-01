@@ -10,10 +10,10 @@ const Wrapper = styled.div`
     min-height: 100vh;
     margin-top: 12vh;
 
-    img {
+    #profilePicture {
         width: 256px;
         border-radius: 100%;
-        
+        margin-top: 16px;
     }
 
     @media only screen and (max-width:840px) {
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
         background-color: transparent;
         border: 1px solid black;
         width: fit-content;
-        margin: 0 auto 2em;
+        margin: 16px auto 2em;
         padding: 12px;
         -webkit-transition: .1s;
     }
@@ -51,10 +51,10 @@ class Home extends Component {
         return (
             <Wrapper>
                 <section>
-                    <img src={image1}></img>
+                    <img id="profilePicture" alt="me" src={image1} />
                     <h1>Front-end developer based in Stockholm</h1>
                     <p className="textContainer">Hello! My name is Marcel, and I'm an aspiring front-end developer
-                    constantly learning new things. Currently pursuing a Higher Vocational degree in front-end development.</p>
+                    constantly learning new things. Currently pursuing a Higher Vocational degree in front-end development, searching for an internship, and tinkering away.</p>
                     <Link className="button frontPageButton" to="/portfolio">Portfolio</Link>
                 </section>
                 <Technologies></Technologies>

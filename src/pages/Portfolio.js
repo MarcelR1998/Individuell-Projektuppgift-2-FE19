@@ -45,7 +45,7 @@ class Portfolio extends Component {
             <p>{item.description}</p>
             <div style={{ display: "flex", justifyContent: "space-evenly", flexDirection: "row" }}>
                 {item.homepage ? <PortfolioButton href={item.homepage}>website</PortfolioButton> : null}
-                <PortfolioButton href={item.html_url}><i class="fab fa-github"></i> github</PortfolioButton>
+                <PortfolioButton href={item.html_url}><i className="fab fa-github"></i> github</PortfolioButton>
             </div>
         </li>
     }
