@@ -66,7 +66,7 @@ class Portfolio extends Component {
                     <div>
                         <h1>What I've done</h1>
                         <p><i className="fa fa-github"></i> Repos: {items.length} - <i className="far fa-star"></i> Stargazers: {starred} </p>
-                        <input type="text" placeholder="Sök " id="search" value={this.search} onChange={this.onchange} ></input>
+                        <input type="text" placeholder="Search " id="search" value={this.search} onChange={this.onchange} autoComplete="off"></input>
                         <ul>
                             {items.map(item => (
                                 this.renderItem(item)
